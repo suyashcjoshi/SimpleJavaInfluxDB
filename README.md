@@ -1,4 +1,4 @@
-## Calling InfluxDB Serverless cloud with Simple Java Apps
+## Integrating with InfluxDB Cloud Serverless with Simple Java Apps
 
 ### Pre-requisites:
 
@@ -10,7 +10,5 @@
 
 ## What this project does?
 
-This project shows how to connect a simple Java command line application created using [Maven](https://maven.apache.org) and the light weight [InfluxDB v3 client SDK](https://github.com/InfluxCommunity/influxdb3-java) to authenticate and then perform writing and query sample data to the cloud hosted bucket.
-
-### HelloInfluxDB Class
+This project shows how to connect a simple Java command line application created using [Maven](https://maven.apache.org) and the light weight [InfluxDB v3 client SDK](https://github.com/InfluxCommunity/influxdb3-java) to authenticate and then perform writing and query sample data to the cloud hosted bucket. The key class is *HelloInfluxDB.java* that has complete logic.
 

@@ -10,5 +10,9 @@
 
 ## What this project does?
 
-This project shows how to connect a simple Java command line application created using [Maven](https://maven.apache.org) and the light weight [InfluxDB v3 client SDK](https://github.com/InfluxCommunity/influxdb3-java) to authenticate and then perform writing and query sample data to the cloud hosted bucket. The key class is *HelloInfluxDB.java* that has complete logic.
+This project shows how to connect a simple Java command line application created using [Maven](https://maven.apache.org) and the light weight [InfluxDB v3 client SDK](https://github.com/InfluxCommunity/influxdb3-java) by authenticating and then perform writing and querying of sample data to the cloud hosted bucket. 
+
+The key class is *HelloInfluxDB.java* that has complete logic.
+
+More sophisticated example using SpringBoot and Micronaut frameworks are coming soon!
 

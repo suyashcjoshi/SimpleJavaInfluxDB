@@ -10,10 +10,10 @@ import java.util.stream.Stream;
 
 public class HelloInfluxDB {
   private static final String HOST_URL = "https://eu-central-1-1.aws.cloud2.influxdata.com"; // URL information is present in the cloud portal
-  private static final String DATABASE = "java"; // Database name is the bucket name present in the cloud portal
-  private static final char[] API_TOKEN = "API_TOKEN".toCharArray(); // Avoid hard-coding API_TOKEN in production. It is present in the cloud portal.
+  private static final String DATABASE = "java"; // your bucket in InfluxDB Cloud Serverless
+  private static final char[] API_TOKEN = System.getenv("API_TOKEN"); // your API Token found in InfluxDB Cloud Serverless stored locally
 
-  // Authenticate, Write and Query data from the serverless InfluxDB
+  // Authenticate to create client and perform Write and Query operations
   public static void main(String[] args) {
     try (InfluxDBClient client = InfluxDBClient.getInstance(HOST_URL, API_TOKEN, DATABASE)) {
       writeData(client);
@@ -25,7 +25,7 @@ public class HelloInfluxDB {
     }
   }
 
-  // Write sample measurement using Point class API
+  // Use the Point class to construct time series data.
   private static void writeData(InfluxDBClient client) {
     Point point = Point.measurement("temperature")
                        .setTag("location", "London")
